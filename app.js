@@ -1,6 +1,6 @@
 'use strict';
 const E=ReferralEngine,$=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const KEY='yatharth-case8-v1';let records=[],view='queue',selected=null,role='Coordinator',reviewer='Coordinator',filter='',query='';
+const KEY='yatharth-referral-v1';let records=[],view='queue',selected=null,role='Coordinator',reviewer='Coordinator',filter='',query='';
 try{const data=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(data))records=data;}catch{}
 const stamp=()=>new Date().toISOString();
 function save(){try{localStorage.setItem(KEY,JSON.stringify(records));}catch{notice('Storage unavailable. This session still works; export your evidence before closing.');}}
